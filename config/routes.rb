@@ -4,7 +4,9 @@ KcwWorld::Application.routes.draw do
   resources :proverbs
   resources :photos
   resources :articles  
-  get 'home' => 'home#index', :as => :home
+
+  
+  match 'home' => 'home#index', :as => :home
   root :to => 'home#index'
 
 end
